@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Landing Page</title>
+    <style>
+    .body{
+        background-color:#ffff;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: #ffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, alpha);
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .logo img{
+        width: 35px;
+        margin-right: 8px;
+    }
+    .nav ul{
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: aqua;
+        font-weight: bold;
+    }
+    contact-btn{
+        background: orange;
+        padding: 7px 14px;
+        border-radius: 6px;
+        color: #ffff;
+    }
+    .hero{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+    }
+    .text-content{
+        max-width: 450px;
+    }
+    .text-content h1{
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    highlight{
+        color: blanchedalmond;
+    }
+    .hightlight-blue{
+        color: blueviolet;
+    }
+    .enroll-btn{
+        background: black;
+        color: white;
+        padding: 10px 18px;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    .image-content img{
+        max-width: 100%;
+        height: auto;
+    } 
+    .curriculm{
+        text-align: center;
+        padding: 20px;
+    }
+    .h1{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+    .card{
+        background: whitesmoke;
+        padding: 18px;
+        width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, alpha);
+        text-align: center;
+    }
+    .card img{
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+    .card p{
+        font-size: 12px;
+        color: azure;
+        margin-bottom: 10px;
+    }
+    .card a{
+        text-decoration: none;
+        color: blanchedalmond;
+        font-weight: bold;
+    }
+    .stories-section{
+        max-width: 1000px;
+        margin: auto;
+        text-align: center;
+    }
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    .nav-butten{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+    .nav-button:hover{
+        background: #f4f4f4;
+    }
+    .stories-container{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-story{
+        background: whitesmoke;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, alpha);
+        text-align: left;
+    }
+    .main-story img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .main-story .date{
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 15px;
+        color: white;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .stories-grid{
+        display: flex;
+        grid-template-columns: repeat(auto-fit,minmax(200px 1fr));
+        gap: 10px;
+    }
+    .story{
+        background: whitesmoke;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(red, green, blue, alpha);
+    }
+    .story img{
+        width: 100%;
+        border-radius: 8px;
+    }
+    .story.date{
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 10px;
+        color: whitesmoke;
+        font-size: 10px;
+        margin: 10px;
+    }
+j
+    @media screen and (max-width:576px) {
+        .header{
+            flex-direction: column;
+            text-align: center;
+        }
+        .nav ul{
+            flex-direction: column;
+            gap: 8px;
+        }
+        .hero{
+            flex-direction: column;
+            text-align: center;
+            padding: 18pt;
+        }
+        .text-content{
+            max-width: 100%;
+        }
+        .container{
+            flex-direction: column;
+            align-items: center;
+        }
+        .stories-grid{
+            grid-template-columns: 1fr;
+        }
+        
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="B11-A2-Kids-School/assets/logo.png" alt="School Logo">
+            <span>SCHOOL</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Facilities</a></li>
+                <li><a href="#">Admission</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="text-content">
+            <h2>
+            <span class="highlight">Empowering</span>students from small age
+            <span class="highlight-blue"> towards vision</span>
+            </h2>
+            <p>
+                With the courage, Confidence, Creativity and Compassion to make their Unique Contribution in a Diverse and Dynamic World.
+            </p>
+            <button class="enroll-btn">Enroll Now</button>
+
+        </div>
+        <div class="image-content">
+            <img src="B11-A2-Kids-School/assets/hero-kids.png" alt=" Superhero Kid">
+        </div>
+    </section>
+    <section class="curriculum">
+        <h1>Standard Curriculum</h1>
+        <div class="container">
+        <div class="card">
+            <img src="B11-A2-Kids-School/assets/kinder.png" alt="Kinder">
+            <h3>Kinder (3-6)years</h3>
+            <p>Cum sociis natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus
+                mu sdis parturient
+            </p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="card">
+            <img src="B11-A2-Kids-School/assets/elementary.png" alt="Elementary">
+            <h3>Elementary School</h3>
+            <p>Cum sociis natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus
+                mu sdis parturient
+            </p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="card">
+            <img src="B11-A2-Kids-School/assets/middle.png" alt="Middle">
+            <h3>Middle (10-16) Years</h3>
+            <p>Cum sociis natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus
+                mu sdis parturient
+            </p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+    </section>
+    <section>
+        <div class="stories-section">
+            <div class="navigation">
+                <button class="nav-butten">&#9664</button>
+                <h3>Our Stories</h3>
+                <div class="stories-container">
+                    <div class="main-story">
+                        <img src="B11-A2-Kids-School/assets/story-1.png" alt="">
+                        <span class="date blue">November 19, 2019</span>
+                        <h2>A fun toddler coloring training on
+                            classroom</h2>
+                        <p>Beautiful branding for changes by Never Now in Australia.
+                            changes is a platform for open discussion in an inclusive and
+                            collaborative environment, providing the...</p>
+                    </div>
+                <div class="stories-grid">
+                    <div class="story">
+                        <img src="B11-A2-Kids-School/assets/story-2.png" alt="">
+                        <span class="date purple">November 19, 2019</span>
+                        <h3>Find out if a school fits the
+                            family’s needs</h3>
+                    </div>
+                    <div class="story">
+                        <img src="B11-A2-Kids-School/assets/story-3.png" alt="">
+                        <span class="date yellow">November 19, 2019</span>
+                        <h3>Summer math & literacy
+                            centres for kids</h3>
+                    </div>
+                    <div class="story">
+                        <img src="B11-A2-Kids-School/assets/story-4.png" alt="">
+                        <span class="date yellow">November 19, 2019</span>
+                        <h3>Classroom management
+                            techniques for new tutors</h3>
+                    </div>
+                    div class="story">
+                        <img src="B11-A2-Kids-School/assets/story-5.png" alt="">
+                        <span class="date green">November 19, 2019</span>
+                        <h3>Conversation rhymes
+                            improve kids listening</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
