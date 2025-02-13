@@ -9,14 +9,18 @@
         background-color:#ffff;
         justify-content: center;
         align-items: baseline;
+        background-image: -webkit-image-set(B11-A2-Kids-School/assets/bg.png);
     }
-    .header{
+    header{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px 40px;
         background: #ffff;
         box-shadow: 0 2px 8px rgba(0, 0, 0, alpha);
+    }
+    .hamburger{
+        display: none;
     }
     .logo{
         display: flex;
@@ -28,17 +32,17 @@
         width: 35px;
         margin-right: 8px;
     }
-    .nav ul{
+    nav ul{
         list-style: none;
         display: flex;
         gap: 20px;
     }
     nav ul li a{
-        text-decoration: none;
         color: aqua;
         font-weight: bold;
+        text-decoration: none;
     }
-    contact-btn{
+    .contact-btn{
         background: orange;
         padding: 7px 14px;
         border-radius: 6px;
@@ -57,7 +61,7 @@
         font-size: 2rem;
         line-height: 1.2;
     }
-    highlight{
+   .highlight{
         color: blanchedalmond;
     }
     .hightlight-blue{
@@ -70,6 +74,7 @@
         border: none;
         margin-top: 20px;
         cursor: pointer;
+        border-radius: 5px;
     }
     .image-content img{
         max-width: 100%;
@@ -79,9 +84,11 @@
         text-align: center;
         padding: 20px;
     }
-    .h1{
+    h1{
         font-size: 30px;
         margin-bottom: 15px;
+        justify-content: center;
+        text-align: center;
     }
     .container{
         display: flex;
@@ -90,11 +97,10 @@
         gap: 18px;
     }
     .card{
-        background: whitesmoke;
+        background: rgb(186, 114, 186);
         padding: 18px;
         width: 300px;
         border-radius: 8px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, alpha);
         text-align: center;
     }
     .card img{
@@ -104,12 +110,12 @@
     }
     .card p{
         font-size: 12px;
-        color: azure;
+        color: black;
         margin-bottom: 10px;
     }
     .card a{
         text-decoration: none;
-        color: blanchedalmond;
+        color: black;
         font-weight: bold;
     }
     .stories-section{
@@ -131,8 +137,19 @@
         gap: 15px;
         margin-bottom: 15px;
     }
-    .nav-button:hover{
-        background: #f4f4f4;
+    .button-container{
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .circle-btn{
+        background-color: orange;
+    }
+    button{
+        background-color: orange;
+        text-decoration-color: white;
+        border-radius: 5px;
     }
     .stories-container{
         display: flex;
@@ -159,8 +176,8 @@
         margin-top: 10px;
     }
     .stories-grid{
-        display: flex;
-        grid-template-columns: repeat(auto-fit,minmax(200px 1fr));
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
         gap: 10px;
     }
     .story{
@@ -181,25 +198,29 @@
         font-size: 10px;
         margin: 10px;
     }
-    .footer{
-        background-color: bisque;
+    footer{
+        background-color:whitesmoke;
         color: azure;
-        padding: 25px 10%;text-align: center;
+        padding: 25px 10%;
+        text-align: center;
+        display: flex;
     }
     .footer-container{
+        background-color: skyblue;
         display: flex;
         min-width: 200px;
-        margin: 10px;
-    }
+        margin: 10px; border-radius: 5px
+    };
     .footer-sction p ul li a {
         font-size: 15px;
         line-height: 1.2rem;
         color: white;
         text-decoration: none;
         margin: 0%;
+        display: flex;
      }
-     footer-section ul li a :hover{
-        text-decoration: underline;
+    .footer-section ul li a :hover{
+        text-decoration: none;
      }
      .social-iconx{
         display: flex;
@@ -207,14 +228,45 @@
         gap: 10px;
         margin-top: 10px;
      }
-     social-icons img{
+    .social-icons img{
         width: 30px;
         height: 30px;
+     }
+     .blue{
+        background-color: blue;
+     }
+     .purple{
+        background-color: purple;
+     }
+     .yellow{
+        background-color: yellow;
+     }
+     .green{
+        background-color: green;
+     }
+     .story{
+        position: relative;
+     }
+     .date{
+        position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+     }
+     .highlight-blue{
+        text-decoration-color:blue;
      }
     @media screen and (max-width:576px) {
         .header{
             flex-direction: column;
             text-align: center;
+        }
+        .hamburger{
+            display: block;
+        }
+        .menu{
+            display: none;
         }
         .nav ul{
             flex-direction: column;
@@ -233,7 +285,7 @@
             align-items: center;
         }
         .stories-grid{
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2,1fr);
         }
         .footer-container{
             flex-direction: column;
@@ -248,6 +300,7 @@
     }
 
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -256,20 +309,22 @@
             <span>SCHOOL</span>
         </div>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
+            <ul class="menu">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Facilities</a></li>
                 <li><a href="#">Admission</a></li>
                 <li><a href="#">Contact</a></li>
+                <button>content</button>
             </ul>
+            <span class="hamburger"><i class="fa-solid fa-bars"></i></span>
         </nav>
     </header>
     <section class="hero">
         <div class="text-content">
             <h2>
-            <span class="highlight">Empowering</span>students from small age
-            <span class="highlight-blue"> towards vision</span>
+            <span style="color: orange;">Empowering</span> 
+            <br>students from small <br>
+            age <span style="color: skyblue;"> towards vision</span>
             </h2>
             <p>
                 With the courage, Confidence, Creativity and Compassion to make their Unique Contribution in a Diverse and Dynamic World.
@@ -311,47 +366,50 @@
             </p>
             <a href="#">Read More</a>
         </div>
+    </div> 
+    <div class="button-container">
+        <button class="circle-btn">&#x3C</button>
+        <button class="circle-btn">&#x3E</button>
     </div>
     </section>
     <section>
+        <h1>Our Stories</h1>
         <div class="stories-section">
             <div class="navigation">
-                <button class="nav-butten">&#9664</button>
-                <h3>Our Stories</h3>
                 <div class="stories-container">
                     <div class="main-story">
-                        <img src="B11-A2-Kids-School/assets/story-1.png" alt="">
+                        <div><img src="B11-A2-Kids-School/assets/story-1.png" alt=""></div>
                         <span class="date blue">November 19, 2019</span>
-                        <h2>A fun toddler coloring training on
-                            classroom</h2>
+                        <div><h2>A fun toddler coloring training on
+                            classroom</h2></div>
                         <p>Beautiful branding for changes by Never Now in Australia.
                             changes is a platform for open discussion in an inclusive and
                             collaborative environment, providing the...</p>
                     </div>
                 <div class="stories-grid">
                     <div class="story">
-                        <img src="B11-A2-Kids-School/assets/story-2.png" alt="">
+                       <div> <img src="B11-A2-Kids-School/assets/story-2.png" alt=""></div>
                         <span class="date purple">November 19, 2019</span>
-                        <h3>Find out if a school fits the
-                            family’s needs</h3>
+                       <div> <h3>Find out if a school fits the
+                        family's needs</h3></div>
                     </div>
                     <div class="story">
-                        <img src="B11-A2-Kids-School/assets/story-3.png" alt="">
+                        <div><img src="B11-A2-Kids-School/assets/story-3.png" alt=""></div>
                         <span class="date yellow">November 19, 2019</span>
-                        <h3>Summer math & literacy
-                            centres for kids</h3>
+                        <div><h3>Summer math & literacy
+                            centres for kids</h3></div>
                     </div>
                     <div class="story">
-                        <img src="B11-A2-Kids-School/assets/story-4.png" alt="">
+                       <div> <img src="B11-A2-Kids-School/assets/story-4.png" alt=""></div>
                         <span class="date yellow">November 19, 2019</span>
-                        <h3>Classroom management
-                            techniques for new tutors</h3>
+                       <div><h3>Summer math & literacy
+                        centres for kids</h3></div>
                     </div>
-                    div class="story">
-                        <img src="B11-A2-Kids-School/assets/story-5.png" alt="">
+                    <div class="story">
+                        <div><img src="B11-A2-Kids-School/assets/story-5.png" alt=""></div>
                         <span class="date green">November 19, 2019</span>
-                        <h3>Conversation rhymes
-                            improve kids listening</h3>
+                        <div><h3>Conversation rhymes
+                            improve kids listening</h3></div>
                     </div>
 
                 </div>
@@ -364,7 +422,7 @@
                 <img src="B11-A2-Kids-School/assets/logo.png" alt="">
                 <h2>Kids
                     Education</h2>
-                <p>Pizza ipsum dolor meat lovers buffalo. Deep dolor roll melted bacon Bianca pan bacon pineapple Aussie. Mayo rib sauce Hawaiian meatball.</p>
+                <p>Pizza ipsum dolor meat lovers buffalo. Deep dolor roll melted bacon Bianca pan bacon pineapple <br>Mayo rib sauce Hawaiian meatball.</p>
             </div>
             <div class="footer-section">
                 <h2>About school</h2>
@@ -376,7 +434,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h2>Keep In Touch</h2>
+                <h2>  Keep In Touch</h2>
                 <div class="social-iconx">
                     <a href="#"><img src="B11-A2-Kids-School/assets/fb.png" alt="Facebook"></a>
                     <a href="#"><img src="B11-A2-Kids-School/assets/dribble.png" alt="Dribble"></a>
